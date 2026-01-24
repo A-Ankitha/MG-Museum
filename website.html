@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mahatma Gandhi Museum</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="museum.css" />
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+<!-- INFO BOX -->
+<div id="info-box">
+
+    <section id="home">
+        <h3>Welcome</h3>
+        <p>
+            Welcome to the Mahatma Gandhi Museum. This website is created
+            to introduce visitors to the museum and its cultural significance.
+        </p>
+    </section>
+
+    <section id="about">
+        <h3>About the Museum</h3>
+        <p>
+            The Mahatma Gandhi Museum showcases the life, values, and legacy
+            of Mahatma Gandhi through photographs, documents, and artifacts.
+        </p>
+    </section>
+
+    <section id="contact">
+        <h3>Contact</h3>
+        <p>Email: example@email.com</p>
+        <p>Phone: +91 XXXXX XXXXX</p>
+    </section>
+
+    <section id="collection">
+        <h3>Collections</h3>
+        <ul>
+            <li>Ancient Statuary & Religious Iconography</li>
+            <li>Vintage Technology & Household Utensils</li>
+            <li>Carved Stones</li>
+            <li>Ancient Stone Inscriptions & Sculptures</li>
+            <li>Natural History & Geological Specimens</li>
+            <li>Marine Life & Coral Reefs</li>
+            <li>Cabinet of Curiosity,... & many more </li>
+        </ul>
+    </section>
+
+    <section id="visit">
+        <h3>Visit</h3>
+        <p>
+            📍 Location: In Canara School Campus, VRFQ+JMH,
+            Dongerkery, Kodailbail, Mangaluru, Karnataka - 575003
+        </p>
+        <p>🕘 Timings: 10:00 AM – 5:00 PM (may vary)</p>
+        <p>🎟 Entry: Free or nominal fee</p>
+        <p>🌤 Best time to visit: Morning hours</p>
+        <p><em>This is an unofficial informational website.</em></p>
+    </section>
+
+</div>
+
+<header onmouseleave="hideInfoBox()">
+    <h2>Mahatma Gandhi Museum</h2>
+
+    <nav>
+        <a href="#home-section"  onmouseenter="showSection('home')" onclick="showSection('home')">Home</a>
+        <a href="#about-section" onmouseenter="showSection('about')" onclick="showSection('about')">About</a>
+        <a href="#contact-section" onmouseenter="showSection('contact')" onclick="showSection('contact')">Contact</a>
+        <a href="#gallery" onmouseenter="showSection('collection')" onclick="showSection('collection')">Collections</a>
+        <a href="#visit-section" onmouseenter="showSection('visit')" onclick="showSection('visit')">Visit</a>
+    </nav>
+</header>
+<section id="home-section">
+    <p><span style="text-align: center;">...</span></p>
+</section>
+<!-- HERO SECTION -->
+<section id="about-section" class="hero-section">
+
+    <div class="hero-video">
+        <div class="video-poster active" id="videoPoster">
+            <img src="src/museum.jpeg" alt="Museum">
+            <div class="poster-overlay">
+                <h1>Preserving Heritage & Culture</h1>
+            </div>
+            <button class="play-btn" id="playBtn" aria-label="Play video">
+                <svg width="80" height="80" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="48" fill="rgba(0,0,0,0.6)" />
+                    <polygon points="42,30 75,50 42,70" fill="#fff" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="video-wrapper" id="videoWrapper">
+            <video id="heroVideo" muted playsinline loop>
+                <source src="src/video.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <div class="hero-side-text">
+        <h1>About the Museum</h1>
+        <p>
+            Step into a sanctuary of peace and wonder at the <b>Mahatma Gandhi Museum</b>. 
+            Tucked away within the historic Canara High School campus, this "<b>hidden gem</b>" 
+            of Mangaluru offers a unique journey through the life of the Father of the Nation.
+            Beyond its moving tribute to Gandhian philosophy, the museum is a fascinating 
+            "<b>cabinet of curiosities</b>," housing everything from ancient stone-age tools and 
+            rare international coins to exotic natural history specimens.
+        </p>
+    </div>
+
+</section>
+
+</section>
+<!-- HISTORY & HERITAGE SECTION -->
+<section class="history-heritage" id="history-section">
+
+    <div class="history-content">
+        <h2>History & Heritage</h2>
+        <p>The Mahatma Gandhi Museum stands as a living 
+            testament to India’s freedom struggle and 
+            Gandhian values. Its roots trace back to 
+            Mahatma Gandhi’s visits to the Canara institutions,
+             which left a lasting imprint on the cultural and
+              educational life of Mangaluru.</p>
+
+        <p>Gandhi first visited the Canara High School in 1927,
+             where he unveiled the portrait of Lokmanya Tilak,
+              inspiring students and citizens alike. His second 
+              visit in 1934 was historic, as he laid the foundation
+               stone for the Krishna Mandir within the campus, 
+               symbolizing the harmony between education, spirituality,
+                and national service.</p>
+
+        <p>In 1939, Gandhi personally granted permission for the museum to be named in his honour—an exceptional gesture  reflecting his trust in the institution’s commitment to ethical values. 
+            Since then, the museum has carefully preserved rare memorabilia, including artifacts directly associated with Gandhi and his visits.</p>
+
+        <p>The museum also highlights the Mushti Fund, an innovative 
+            community-supported initiative introduced by Subbarao Pai. 
+            By encouraging households to contribute a handful of rice 
+            each day to support education, the scheme embodied Gandhian 
+            ideals of self-reliance, cooperation, and social responsibility.</p>
+
+        <p>Historic photographs and artifacts—such as the laying of the 
+            foundation stone of the Canara High School building in 
+            1960—illustrate how Gandhian principles continued to guide 
+            institutional growth. Together, these exhibits connect the 
+            region’s past with its present, preserving Mangaluru’s rich 
+            heritage for future generations.</p>
+
+    </div>
+
+    <div class="history-gallery">
+
+    <div class="history-item">
+        <img src="src/gandhi.jpeg" alt="Mahatma Gandhi Bust" /><p>Mahatma Gandhi used Trowel</p>
+    </div>
+
+    <div class="history-item">
+        <img src="src/img1.jpeg" alt="Gandhi Visit Panel" /><p>Gandhi's Visit</p>
+    </div>
+
+    <div class="history-item">
+        <img src="src/img2.jpeg" alt="Mushti Fund Panel" /><p>Mushti Fund</p>
+    </div>
+
+    <div class="history-item">
+        <img src="src/img3.jpeg" alt="Founder Artifacts" /><p>Founder received Medallion</p>
+    </div>
+
+    <div class="history-item">
+        <img src="src/img4.jpeg" alt="Foundation Stone Ceremony" /><p>Laying Canara School Foundation Stone</p>
+    </div>
+
+</div>
+
+
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+
+    <h3>Museum Collections</h3>
+
+    <!-- GANDHI COLLECTION -->
+    <div class="collection-block">
+        <h4>Outside the Museum</h4>
+
+        <div class="gallery">
+            <div class="item" id="carved-stones-item">
+                <div class="loop-container">
+                    <img src="src/img01.jpeg" alt="Carved Stone 1" class="loop-img active" />
+                    <img src="src/img01_alt.jpeg" alt="Carved Stone 2" class="loop-img" />
+                </div>
+                <p>Carved Stones</p>
+            </div>
+
+            <div class="item">
+                <img src="src/img02.jpeg" alt="Ancient Stone Inscriptions" />
+                <p>Ancient Stone Inscriptions</p>
+            </div>
+
+            <div class="item">
+                <img src="src/img03.jpeg" alt="Bust of Ammembal Subba Rao Pai" />
+                <p>Bust of Ammembal Subba Rao Pai</p>
+            </div>
+
+            <div class="item">
+                <img src="src/img04.jpeg" alt="Pillar" />
+                <p>Ancient Stone Sculpted Pillar</p>
+            </div>
+
+            <div class="item">
+                <img src="src/img05.jpeg" alt="Antique Iron Cannon" />
+                <p>Antique Iron Cannon</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FLOWER COLLECTION -->
+    <div class="collection-block">
+        <h4>Ground Floor</h4>
+
+        <div class="gallery">
+            <div class="item" id="carved-stones-item">
+                <div class="loop-container">
+                    <img src="src/u.jpeg" alt="icon 1" class="loop-img active" />
+                    <img src="src/j.jpeg" alt="icon 2" class="loop-img" />
+                    <img src="src/i.jpeg" alt="icon 3" class="loop-img" />
+                    <img src="src/h.jpeg" alt="icon 4" class="loop-img" />
+                    <img src="src/g.jpeg" alt="icon 5" class="loop-img" />
+                </div>
+                <p>Ancient Statuary & Religious Iconography</p>
+            </div>
+
+            <div class="item">
+                <div class="loop-container">
+                    <img src="src/t.jpeg" alt="marine 1" class="loop-img active" />
+                    <img src="src/s.jpeg" alt="marine 2" class="loop-img" />
+                    <img src="src/p.jpeg" alt="marine 3" class="loop-img" />
+                    <img src="src/o.jpeg" alt="marine 4" class="loop-img" />
+                    <img src="src/q.jpeg" alt="marine 5" class="loop-img" />
+                </div>
+                <p>Natural History & Geological Specimens</p>
+            </div>
+
+            <div class="item">
+                <div class="loop-container">
+                    <img src="src/art1.jpeg" alt="Art 1" class="loop-img active" />
+                    <img src="src/art3.jpeg" alt="Art 2" class="loop-img" />
+                    <img src="src/art2.jpeg" alt="Art 3" class="loop-img" />
+                    <img src="src/art4.jpeg" alt="Art 4" class="loop-img" />
+                    <img src="src/art5.jpeg" alt="Art 5" class="loop-img" />
+                </div>
+                <p>Frames of Art</p>
+            </div>
+
+            <div class="item">
+                <div class="loop-container">
+                    <img src="src/f.jpeg" alt="Household 1" class="loop-img active" />
+                    <img src="src/e.jpeg" alt="Household 2" class="loop-img" />
+                    <img src="src/a.jpeg" alt="Household 3" class="loop-img" />
+                    <img src="src/k.jpeg" alt="Household 4" class="loop-img" />
+                    <img src="src/b.jpeg" alt="Household 5" class="loop-img" />
+                </div>
+                <p>Vintage Technology & Household Utensils</p>
+            </div>
+
+            <div class="item">
+                <img src="src/l.jpeg" alt="coin" />
+                <p>Numismatics & Philatelic Records</p>
+            </div>
+
+            <div class="item">
+                <div class="loop-container">
+                    <img src="src/c.jpeg" alt="Ethnographic 1" class="loop-img active" />
+                    <img src="src/n.jpeg" alt="Ethnographic 2" class="loop-img" />
+                    <img src="src/d.jpeg" alt="Ethnographic 3" class="loop-img" />
+                    <img src="src/m.jpeg" alt="Ethnographic 4" class="loop-img" />
+                    <img src="src/r.jpeg" alt="Ethnographic 5" class="loop-img" />
+                </div>
+                <p>Arms, Armour & Ethnographic Artifacts</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="collection-block">
+        <h4>First Floor</h4>
+
+        <div class="gallery">
+            <div class="item" id="carved-stones-item">
+                <div class="loop-container">
+                    <img src="src/animal9.jpeg" alt="decor 1" class="loop-img active" />
+                    <img src="src/animal2.jpeg" alt="decor 2" class="loop-img" />
+                    <img src="src/animal11.jpeg" alt="decor 3" class="loop-img" />
+                </div>
+                <p>Trophy Mounts & Assemblages</p>
+            </div>
+
+            <div class="item">
+                <div class="loop-container">
+                    <img src="src/animal8.jpeg" alt="specimens 1" class="loop-img active" />
+                    <img src="src/animal3.jpeg" alt="specimens 2" class="loop-img" />
+                </div>
+                <p>Taxidermy & Preserved Specimens</p>
+            </div>
+
+            <div class="item">
+                <div class="loop-container">
+                    <img src="src/animal6.jpeg" alt="Coral 1" class="loop-img active" />
+                    <img src="src/animal10.jpeg" alt="Coral 2" class="loop-img" />
+                    <img src="src/animal7.jpeg" alt="Coral 3" class="loop-img" />
+                </div>
+                <p>Marine Life & Coral Reefs</p>
+            </div>
+
+            <div class="item">
+                <div class="loop-container">
+                    <img src="src/animal5.jpeg" alt="Skulls 1" class="loop-img active" />
+                    <img src="src/animal4.jpeg" alt="Skulls 2" class="loop-img" />
+                </div>
+                <p>Skulls & Bone Fragments</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<section id="cabinet-curiosity" class="museum-parallax-bg">
+    <div class="cabinet-overlay">
+        
+        <div class="cabinet-header-box">
+            <h2>Cabinet of Curiosity</h2>
+        </div>
+
+        <div class="cabinet-container">
+            <div class="cabinet-box" id="cabinet-top">
+                <button class="slide-btn prev" onclick="changeCabinetImage('cabinet-top', -1)">❮</button>
+                <div class="cabinet-frame">
+                    <img src="src/top1.jpeg" class="cabinet-img active" alt="Cabinet Top 1">
+                    <img src="src/top2.jpeg" class="cabinet-img" alt="Cabinet Top 2">
+                    <img src="src/top3.jpeg" class="cabinet-img" alt="Cabinet Top 3">
+                    <img src="src/top4.jpeg" class="cabinet-img" alt="Cabinet Top 4">
+                    <img src="src/top5.jpeg" class="cabinet-img" alt="Cabinet Top 5">
+                    <img src="src/top6.jpeg" class="cabinet-img" alt="Cabinet Top 6">
+                </div>
+                <button class="slide-btn next" onclick="changeCabinetImage('cabinet-top', 1)">❯</button>
+            </div>
+
+            <div class="cabinet-box" id="cabinet-bot">
+                <button class="slide-btn prev" onclick="changeCabinetImage('cabinet-bot', -1)">❮</button>
+                <div class="cabinet-frame">
+                    <img src="src/bot1.jpeg" class="cabinet-img active" alt="Cabinet Bottom 1">
+                    <img src="src/bot2.jpeg" class="cabinet-img" alt="Cabinet Bottom 2">
+                    <img src="src/bot3.jpeg" class="cabinet-img" alt="Cabinet Bottom 3">
+                    <img src="src/bot4.jpeg" class="cabinet-img" alt="Cabinet Bottom 4">
+                    <img src="src/bot5.jpeg" class="cabinet-img" alt="Cabinet Bottom 5">
+                    <img src="src/bot6.jpeg" class="cabinet-img" alt="Cabinet Bottom 6">
+                </div>
+                <button class="slide-btn next" onclick="changeCabinetImage('cabinet-bot', 1)">❯</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+</section>
+<section id="visit-section">
+
+  <h3 class="visit">Plan Your Visit</h3>
+
+  <div class="visit-container">
+
+    <!-- MAP -->
+    <div class="map-box">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.5229304341383!2d74.83664997454514!3d12.874060517010331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba35b007ed05b3d%3A0x9ff18b879db87155!2sMahatma%20Gandhi%20Museum!5e0!3m2!1sen!2sin!4v1769089518594!5m2!1sen!2sin"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+    </div>
+
+    <!-- VISIT DETAILS -->
+    <div class="visit-info">
+      <p><strong>📍 Location:</strong> Mahatma Gandhi Museum</p>
+      <p><strong>🕘 Timings:</strong> 10:00 AM – 5:00 PM (subject to change)</p>
+      <p><strong>🎟 Entry:</strong> Free or nominal fee</p>
+      <p><strong>🌤 Best Time to Visit:</strong> Morning hours</p>
+
+      <p class="visit-note">
+        The museum is easily accessible by public transport and is suitable
+        for students, tourists, and educational groups.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="education">
+    <h3>Educational & Social Value</h3>
+
+    <p>
+        The Mahatma Gandhi Museum plays a vital role in value-based education.
+        It serves as a learning resource for students, researchers, and the public,
+        encouraging ethical thinking and responsible citizenship.
+    </p>
+
+    <p>
+        By highlighting initiatives such as the Mushti Fund and community-led
+        educational movements, the museum demonstrates the practical application
+        of Gandhian principles in social development.
+    </p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="footer-content">
+
+        <section id="contact-section">
+
+            <h3>Contact Us</h3>
+            <p><strong>Email:</strong> example@email.com</p>
+            <p><strong>Phone:</strong> +91 XXXXX XXXXX</p>
+            <p>
+                For group visits, academic inquiries, or educational collaborations,
+                visitors are encouraged to contact the museum authorities in advance.
+            </p>
+        </section>
+
+        <section id="disclaimer">
+            <h3>Disclaimer</h3>
+            <p>
+                This website is an educational and informational project created for
+                academic and tourism promotion purposes. It is not an official website
+                of the Mahatma Gandhi Museum or any government authority.
+            </p>
+        </section>
+
+    </div>
+
+    <p class="footer-note">
+        © 2026 Mahatma Gandhi Museum | Educational / Informational Website
+    </p>
+
+</footer>
+
+
+<!-- SCRIPT -->
+<script>
+    function changeCabinetImage(containerId, direction) {
+        const container = document.getElementById(containerId);
+        const images = container.querySelectorAll('.cabinet-img');
+        
+        if (images.length <= 1) return; // Nothing to slide if only one image
+
+        let currentIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
+        
+        // Remove active state
+        images[currentIndex].classList.remove('active');
+        
+        // Calculate new index
+        currentIndex += direction;
+        
+        if (currentIndex >= images.length) {
+            currentIndex = 0; // Loop back to start
+        } else if (currentIndex < 0) {
+            currentIndex = images.length - 1; // Loop to end
+        }
+        
+        // Set new active image
+        images[currentIndex].classList.add('active');
+    }
+
+    const playBtn = document.getElementById("playBtn");
+    const poster = document.getElementById("videoPoster");
+    const videoWrapper = document.getElementById("videoWrapper");
+    const video = document.getElementById("heroVideo");
+
+    playBtn.addEventListener("click", () => {
+        poster.classList.remove("active");
+        videoWrapper.classList.add("active");
+        video.currentTime = 0;
+        video.play();
+    });
+
+    function restorePoster() {
+        video.pause();
+        videoWrapper.classList.remove("active");
+        poster.classList.add("active");
+    }
+
+    video.addEventListener("ended", restorePoster);
+
+    function showSection(id) {
+        const box = document.getElementById("info-box");
+        box.style.display = "block";
+
+        box.querySelectorAll("section").forEach(section => {
+            section.style.display = "none";
+        });
+
+        document.getElementById(id).style.display = "block";
+    }
+
+    function hideInfoBox() {
+        document.getElementById("info-box").style.display = "none";
+    }
+    window.addEventListener("scroll", () => {
+        const heroSection = document.querySelector(".hero-section");
+        const rect = heroSection.getBoundingClientRect();
+
+        const isOutOfView =
+            rect.bottom < 0 || rect.top > window.innerHeight;
+
+        if (isOutOfView && !video.paused) {
+            restorePoster();
+        }
+    });
+
+    function startImageLoops() {
+        // Find every container that has looping images
+        const containers = document.querySelectorAll('.loop-container');
+
+        containers.forEach(container => {
+            const images = container.querySelectorAll('.loop-img');
+            if (images.length < 2) return; // Don't loop if there's only 1 image
+
+            let currentIndex = 0;
+
+            setInterval(() => {
+                // Remove active class from current image
+                images[currentIndex].classList.remove('active');
+
+                // Move to next image, or back to 0 if at the end
+                currentIndex = (currentIndex + 1) % images.length;
+
+                // Add active class to new image
+                images[currentIndex].classList.add('active');
+            }, 3000); // Change image every 3 seconds
+        });
+    }
+
+    // Run the function when the page loads
+    window.addEventListener('DOMContentLoaded', startImageLoops);
+
+</script>
+
+</body>
+</html>

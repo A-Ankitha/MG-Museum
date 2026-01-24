@@ -1,0 +1,568 @@
+/* ========================= */
+/* 1. RESET & GLOBAL STYLES  */
+/* ========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f8fbff;
+    color: #1a2a3a;
+    padding-top: 70px;
+}
+
+/* ========================= */
+/* 2. HEADER & NAVIGATION    */
+/* ========================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #003049;
+    position: fixed;   
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+    border-bottom: #002133 solid 4px;
+}
+
+h2 {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+nav a {
+    margin-left: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #caf0f8;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #48cae4;
+}
+
+/* ================================== */
+/* 3. SECTION HEADINGS & UNDERLINES   */
+/* ================================== */
+section h3, 
+.history-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    color: #003049;
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+section h3::after,
+.history-content h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 4px;
+    width: 60px;
+    background-color: #0077b6;
+    border-radius: 2px;
+}
+
+section h3 { text-align: center; }
+section h3::after { left: 50%; transform: translateX(-50%); }
+
+#visit-section h3, .history-content h2 { text-align: left; }
+#visit-section h3::after, .history-content h2::after { left: 0; transform: none; }
+
+.collection-block h4 {
+    display: inline-block;
+    padding: 10px 25px;
+    margin-bottom: 25px;
+    background-color: #003049;      
+    color: #caf0f8;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    letter-spacing: 0.5px;
+}
+
+/* ===================================== */
+/* 4. HERO SECTION (MERGED CORE & MEDIA) */
+/* ===================================== */
+.hero-section {
+    display: flex;
+    flex-direction: column; /* Mobile first */
+    gap: 30px;
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.hero-video {
+    width: 100%;
+    height: 50vh; /* Mobile height */
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px;
+    background: #000;
+}
+
+.video-poster {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.video-poster.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.video-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-poster::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.poster-overlay {
+    position: absolute;
+    bottom: 15%;
+    left: 8%;
+    color: #fff;
+    z-index: 11;
+}
+
+.play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 12;
+    transition: transform 0.3s ease;
+}
+
+.play-btn:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.video-wrapper {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.8s ease;
+}
+
+.video-wrapper.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-side-text { 
+    width: 100%; 
+    text-align: left; 
+}
+
+.hero-side-text h1 { 
+    font-size: 2.8rem; 
+    color: #003049; 
+    font-family: 'Cormorant Garamond', serif; 
+}
+
+/* ======================================== */
+/* 5. HISTORY SECTION (ACCORDION & GALLERY) */
+/* ======================================== */
+.history-heritage {
+    display: flex;
+    flex-direction: row; /* Side-by-side on desktop */
+    gap: 60px;
+    padding: 100px 80px;
+    background-color: #003049;
+    align-items: flex-start; /* Align text and gallery to the top */
+    color: #f0f9ff;
+    width: 100%;
+}
+
+.history-content {
+    flex: 1.5; /* Gives more room to the text */
+    text-align: justify;
+}
+
+.history-content p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.history-content h2 { color: #caf0f8; }
+
+.history-gallery {
+    flex: 1; /* Gallery takes up less space than the text */
+    display: flex;
+    gap: 12px;
+    height: 550px;
+}
+
+/* Ensure images don't expand anymore */
+.history-item {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+.history-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.history-item p {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    padding: 10px;
+    background: rgba(0, 48, 73, 0.8);
+    color: #fff;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.history-item:hover {
+    flex: 5;
+}
+
+.history-item:hover p { opacity: 1; }
+
+@media (max-width: 1100px) {
+    .history-heritage {
+        flex-direction: column; /* Stack vertically earlier to prevent squeezing */
+        padding: 60px 30px;
+    }
+
+    .history-content {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .history-gallery {
+        width: 100%;
+        height: 400px; /* Shorter height for stacked view */
+    }
+}
+/* GALLERY SECTION SPACING */
+#gallery {
+    padding: 10px 40px 60px; /* Increased top padding from 60px to 100px */
+    max-width: 1200px;
+    margin: 40px auto 0; /* Added 40px top margin for extra breathing room */
+}
+
+#gallery h3 {
+    margin-bottom: 50px; /* More space between heading and first collection block */
+}
+/* Fixed Items / Standard Gallery */
+.gallery {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    padding: 0 10px;
+    height: 350px;
+    margin-bottom: 40px;
+    overflow-x: auto;
+}
+
+.item {
+    flex: 0 0 280px;
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for both movement and shadow */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;}
+
+.item p {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    padding: 10px;
+    background: rgba(0, 48, 73, 0.8);
+    color: #fff;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.item:hover {
+    transform: translateY(-8px); /* Moves the item upwards by 8px */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Deepens the shadow to enhance the lift effect */
+    cursor: pointer;
+}
+
+/* ================================== */
+/* 6. CABINET OF CURIOSITY (PARALLAX) */
+/* ================================== */
+.museum-parallax-bg {
+    background-image: url('src/inside.jpeg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    /* Ensure full screen width */
+    width: 100vw; 
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    
+    /* Ensure visibility */
+    overflow: hidden; 
+}
+
+.cabinet-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 80px 0; /* Adjusted padding to prevent horizontal scroll */
+    text-align: center;
+    width: 100%;
+}
+
+/* Reset max-width logic for the container inside the full-width background */
+.cabinet-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Increased gap slightly for better visual separation */
+    max-width: 1000px; /* Keep the boxes centered and readable */
+    margin: 0 auto;
+    padding: 0 20px; /* Padding for mobile view */
+}
+
+.cabinet-header-box {
+    display: inline-block;
+    background-color: #002b45;
+    padding: 10px 40px;
+    margin-bottom: 50px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    border-radius: 50px;
+}
+
+.cabinet-header-box h2 {
+    color: #ffffff !important;
+    margin: 0;
+    font-size: 2rem;
+    font-family: 'Cormorant Garamond', serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.cabinet-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8); /* Slightly darker for contrast against the image */
+    width: 100%;
+    max-width: 900px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    border-radius: 8px;
+}
+
+.cabinet-frame {
+    flex-grow: 1;
+    width: 100%;
+    height: 450px; /* Increased height for better desktop view */
+    position: relative;
+    overflow: hidden;
+    background: #111;
+}
+
+/* Mobile responsive height */
+@media (max-width: 768px) {
+    .cabinet-frame {
+        height: 300px;
+    }
+}
+
+.cabinet-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.cabinet-img.active {
+    opacity: 1;
+    position: relative;
+}
+
+.slide-btn {
+    background: #002b45;
+    color: #a1acfc;
+    border: none;
+    padding: 30px 15px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    transition: 0.3s;
+}
+
+.slide-btn:hover { background: #a1acfc; color: #002b45; }
+
+/* ========================= */
+/* 7. LOOP IMAGE LOGIC       */
+/* ========================= */
+.loop-container { position: relative; width: 100%; height: 100%; }
+.loop-img { 
+    position: absolute; 
+    inset: 0; 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    opacity: 0; 
+    transition: opacity 1.5s ease-in-out; 
+}
+.loop-img.active { opacity: 1; }
+
+/* ========================= */
+/* 8. VISIT & INFO BOX       */
+/* ========================= */
+#visit-section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+    text-align: left;
+}
+
+#education {
+    background-color: #eef9ff;
+    padding: 40px 20px;
+    text-align: justify;
+    border-top: 1px solid #caf0f8;
+    border-bottom: 1px solid #caf0f8;
+}
+
+#info-box {
+    position: fixed;
+    right: 40px;
+    top: 55px;
+    width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    display: none;
+    z-index: 999;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* ========================= */
+/* 9. FOOTER                 */
+/* ========================= */
+footer {
+    background-color: #002133;
+    color: #caf0f8;
+    padding: 60px 20px 20px;
+}
+
+footer h3 {
+    color: #caf0f8;
+    margin-bottom: 20px;
+}
+
+.footer-note {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 30px;
+    color: #90e0ef;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    max-width: 1000px;
+    margin: auto;
+    padding-bottom: 30px;
+}
+
+/* ===================================== */
+/* 10. DESKTOP MEDIA QUERIES (BREAKPOINTS) */
+/* ===================================== */
+
+/* Tablet/Desktop (900px+) */
+@media (min-width: 900px) {
+    .hero-section { flex-direction: row; align-items: center; padding: 60px 40px; }
+    .hero-video { flex: 1.2; height: 70vh; }
+    .hero-side-text { flex: 0.8; }
+    
+    .history-heritage { flex-direction: row; padding: 80px 60px; }
+    .footer-content { flex-direction: row; }
+    
+    #visit-section { padding: 80px 40px 80px 120px; }
+    #education { padding: 80px 100px; }
+}
+
+/* Desktop Large (1024px+) */
+@media (min-width: 1024px) {
+    .hero-section { height: 80vh; }
+    .hero-video { height: 100%; }
+    .cabinet-frame { height: 85vh; min-height: 500px; }
+}
+
+/* Wide Desktop (1200px+) */
+@media (min-width: 1200px) {
+    .hero-section { padding: 90px 80px; gap: 60px; }
+    .hero-side-text h1 { font-size: 3.2rem; }
+    .hero-side-text p { font-size: 1.1rem; max-width: 520px; }
+
+    .history-heritage { padding: 100px 80px; gap: 70px; }
+    .history-gallery { height: 550px; }
+    .history-item p { font-size: 0.9rem; pointer-events: none; z-index: 10; }
+
+    #visit-section { padding: 100px 80px 100px 140px; max-width: 1100px; }
+    #education { padding: 100px 120px; font-size: 1.05rem; line-height: 1.8; }
+    footer { padding-top: 80px; }
+    .footer-content { gap: 80px; }
+}
